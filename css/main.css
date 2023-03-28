@@ -695,7 +695,7 @@ iframe,
 .icon-link a,
 .language,
 .code-copy {
-    user-select: none;
+    user-select: none; 
 }
 code {
     background: #bddcf76b;
