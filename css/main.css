@@ -791,6 +791,16 @@ ul li,
 ol li {
     margin: 8px 0;
 }
+#article-background{
+    display: flex;
+    width: auto;
+    height: 500px;
+    justify-content: center;
+    margin: 55px 0 0;
+}
+#background-2-img{
+    width: 900px;
+}
 @keyframes loop1 {
     from {
         transform: rotate(30deg);
