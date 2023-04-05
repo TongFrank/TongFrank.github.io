@@ -1,0 +1,377 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>利用Hexo在GitHub-page上创建个人博客 | Frank&#39; blog</title>
+        <meta name="author" content="Frank" />
+        <meta name="description" content="" />
+        <meta name="keywords" content="" />
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" />
+        <link rel="icon" href="/images/avatar.png" />
+        <script src="https://cdn.staticfile.org/vue/3.2.47/vue.global.prod.min.js"></script>
+<link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/6.3.0/css/all.min.css" />
+<link rel="stylesheet" href="/css/fonts.min.css" />
+<script> const mixins = {}; </script>
+
+<script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+
+
+<script src="https://cdn.staticfile.org/highlight.js/11.7.0/highlight.min.js"></script>
+<link
+    rel="stylesheet"
+    href="https://cdn.staticfile.org/highlight.js/11.7.0/styles/github.min.css"
+/>
+<script src="/js/lib/highlight.js"></script>
+
+
+
+<script src="/js/lib/preview.js"></script>
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/css/main.css" />
+
+    <meta name="generator" content="Hexo 6.3.0"></head>
+    <body>
+        <div id="layout">
+            <transition name="fade">
+            <div id="loading" v-show="loading">
+                <div id="loading-circle">
+                    <h2>LOADING</h2>
+                    <p>加载过慢请开启缓存&ensp;浏览器默认开启</p>
+                    <img src="/images/loading.gif" />
+                </div>
+            </div>
+            </transition>
+            <transition name="into">
+            <div id="main" v-show="!loading">
+                <nav id="menu" ref="menu">
+    <div class="desktop-menu">
+        <a class="title" href="/">
+            <span>FRANK&#39; BLOG</span>
+        </a>
+        
+        <a href="/">
+            <i class="fa-solid fa-house fa-fw"></i>
+            <span>&ensp;主页</span>
+        </a>
+        
+        <a href="/about">
+            <i class="fa-solid fa-id-card fa-fw"></i>
+            <span>&ensp;关于</span>
+        </a>
+        
+        <a href="/archives">
+            <i class="fa-solid fa-box-archive fa-fw"></i>
+            <span>&ensp;归档</span>
+        </a>
+        
+        <a href="/categories">
+            <i class="fa-solid fa-bookmark fa-fw"></i>
+            <span>&ensp;分类</span>
+        </a>
+        
+        <a href="/tags">
+            <i class="fa-solid fa-tags fa-fw"></i>
+            <span>&ensp;标签</span>
+        </a>
+        
+    </div>
+    <div id="mobile-menu">
+        <div class="curtain" v-show="showMenu" @click="showMenu = !showMenu"></div>
+        <div class="title" @click="showMenu = !showMenu">
+            <i class="fa-solid fa-bars fa-fw"></i>
+            <span>&emsp;FRANK&#39; BLOG</span>
+        </div>
+        <transition name="slide">
+        <div class="items" v-show="showMenu">
+            
+            <a href="/">
+                <div class="item">
+                    <div style="min-width: 20px; max-width: 50px; width: 10%">
+                        <i class="fa-solid fa-house fa-fw"></i>
+                    </div>
+                    <div style="min-width: 100px; max-width: 150%; width: 20%">主页</div>
+                </div>
+            </a>
+            
+            <a href="/about">
+                <div class="item">
+                    <div style="min-width: 20px; max-width: 50px; width: 10%">
+                        <i class="fa-solid fa-id-card fa-fw"></i>
+                    </div>
+                    <div style="min-width: 100px; max-width: 150%; width: 20%">关于</div>
+                </div>
+            </a>
+            
+            <a href="/archives">
+                <div class="item">
+                    <div style="min-width: 20px; max-width: 50px; width: 10%">
+                        <i class="fa-solid fa-box-archive fa-fw"></i>
+                    </div>
+                    <div style="min-width: 100px; max-width: 150%; width: 20%">归档</div>
+                </div>
+            </a>
+            
+            <a href="/categories">
+                <div class="item">
+                    <div style="min-width: 20px; max-width: 50px; width: 10%">
+                        <i class="fa-solid fa-bookmark fa-fw"></i>
+                    </div>
+                    <div style="min-width: 100px; max-width: 150%; width: 20%">分类</div>
+                </div>
+            </a>
+            
+            <a href="/tags">
+                <div class="item">
+                    <div style="min-width: 20px; max-width: 50px; width: 10%">
+                        <i class="fa-solid fa-tags fa-fw"></i>
+                    </div>
+                    <div style="min-width: 100px; max-width: 150%; width: 20%">标签</div>
+                </div>
+            </a>
+            
+        </div>
+        </transition>
+    </div>
+</nav>
+
+                <div id="article-background">
+    <img src="../../../../images/background-2.png" alt="background-2" id="background-2-img">
+</div>
+<div class="article">
+    <div>
+        <h1>利用Hexo在GitHub-page上创建个人博客</h1>
+    </div>
+    <div class="info">
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2023/4/5
+        </span>
+        
+        <span class="category">
+            <a href="/categories/WebSite/">
+                <span class="icon">
+                    <i class="fa-solid fa-bookmark fa-fw"></i>
+                </span>
+                WebSite
+            </a>
+        </span>
+        
+        
+        <span class="tags">
+            <span class="icon">
+                <i class="fa-solid fa-tags fa-fw"></i>
+            </span>
+            
+            <span class="tag">
+                
+                <a href="/tags/%E8%AE%B0%E4%BA%8B/" style="color: #ff7d73">记事</a>
+            </span>
+            
+            <span class="tag">
+                
+                <a href="/tags/%E6%95%99%E7%A8%8B/" style="color: #ffa2c4">教程</a>
+            </span>
+            
+        </span>
+        
+    </div>
+    
+    <div class="content" v-pre>
+        <p>GitHub 提供了静态网页托管服务，我们可以把自己的静态网站页面部署到GitHub-Page上，更多有关GitHub-Page可以查看<a target="_blank" rel="noopener" href="https://docs.github.com/zh/pages/getting-started-with-github-pages/about-github-pages">GitHub Pages文档</a>，GitHub-Page上的网页可以纯手工制作HTML网页，也可以借助一些软件，例如Hexo，helo等，主要用于创建个人博客。本文根据我的个人博客创建经历，利用Hexo在GitHub-page上创建个人博客，记录一下关于个人博客创建方法。</p>
+<span id="more"></span>
+
+<p>#引言<br>Hexo是一款基于Node.js的静态博客框架，依赖少易于安装使用，可以方便的生成静态网页托管在GitHub和Heroku上，是搭建博客的首选框架。可以将我们撰写的 Markdown 文档解析渲染成静态的 HTML 网页。<br>所以需要先安装好 Node.js。再使用Node.js 的包管理工具 npm下载hexo。</p>
+<h1 id="前期准备"><a href="#前期准备" class="headerlink" title="前期准备"></a>前期准备</h1><p>##注册GitHub账号<br>打开GitHub官网，点击右上角的注册（如已注册请忽略）</p>
+<img src="e8e39eb3-341f-4d4d-a9fa-ae5889d242e4.png" title="" alt="e8e39eb3-341f-4d4d-a9fa-ae5889d242e4" data-align="center">
+
+<p>可以使用QQ邮箱，注册最后需要邮箱验证，如下所示邮件</p>
+<img src="847c4213-bee5-4577-970c-3262084357ca.png" title="" alt="847c4213-bee5-4577-970c-3262084357ca" data-align="center">
+
+<h1 id="软件安装"><a href="#软件安装" class="headerlink" title="软件安装"></a>软件安装</h1><h2 id="下载node-js"><a href="#下载node-js" class="headerlink" title="下载node.js"></a>下载node.js</h2><p>Windows系统下可直接到进入<a target="_blank" rel="noopener" href="https://nodejs.org/zh-cn">Node.js</a>官网下载安装（我下载的安装版）。</p>
+<img src="69174b8b-3933-4ef7-98a9-947643f87410.png" title="" alt="69174b8b-3933-4ef7-98a9-947643f87410" data-align="center">
+
+<p>选择长期维护版本，尝鲜版可能会有Bug，</p>
+<img src="b8a0a07d-4b62-4b8d-b4bb-ae07ffccd9d1.png" title="" alt="b8a0a07d-4b62-4b8d-b4bb-ae07ffccd9d1" data-align="center">
+
+<p>一直点next就行，不用勾选其他选项，</p>
+<img src="901c169f-6670-4a7c-8d5a-41006d7a4fe2.png" title="" alt="901c169f-6670-4a7c-8d5a-41006d7a4fe2" data-align="center">
+
+<p>安装好后打开终端分别输入：</p>
+<pre><code class="bash">node -v
+npm -v
+</code></pre>
+<p>出现版本号说明node.js安装成功。</p>
+<img src="14de271f-6e13-453c-9834-7c8ef26fd713.png" title="" alt="14de271f-6e13-453c-9834-7c8ef26fd713" data-align="center">
+
+<h2 id="下载Hexo"><a href="#下载Hexo" class="headerlink" title="下载Hexo"></a>下载Hexo</h2><p>使用 npm下载安装 Hexo：</p>
+<pre><code class="bash">npm install -g hexo-cli
+</code></pre>
+<img src="5f026a50-af21-4fc2-b1d6-db8567719d99.png" title="" alt="5f026a50-af21-4fc2-b1d6-db8567719d99" data-align="center">
+
+<p>可以输入：</p>
+<pre><code class="bash">hexo -v
+</code></pre>
+<p>查看是否安装成功，如出现下图结果说明安装成功。</p>
+<img src="8d065df9-c199-42b2-a7fa-2f67cdeabb7d.png" title="" alt="8d065df9-c199-42b2-a7fa-2f67cdeabb7d" data-align="center">
+
+<h2 id="下载git"><a href="#下载git" class="headerlink" title="下载git"></a>下载git</h2><p>打开git下载网址<a target="_blank" rel="noopener" href="https://git-scm.com/downloads">Git-Downloads</a>，选择windows版本，下载完成后安装</p>
+<img src="277ff83f-c72d-42fe-95be-b6bef80b92f5.png" title="" alt="277ff83f-c72d-42fe-95be-b6bef80b92f5" data-align="center">
+
+<img src="91da33e0-84b9-4561-b53f-9f796efd5d0f.png" title="" alt="91da33e0-84b9-4561-b53f-9f796efd5d0f" data-align="center">
+
+<p>一直点next</p>
+<img src="f0379e7d-f260-43a8-8806-9801ec381d8b.png" title="" alt="f0379e7d-f260-43a8-8806-9801ec381d8b" data-align="center">
+
+<p>安装好后终端输入</p>
+<pre><code class="bash">git -v
+</code></pre>
+<p>出现版本号说明Git安装完成。</p>
+<img src="30731637-edcd-4c59-bf42-89ad90b590a0.png" title="" alt="30731637-edcd-4c59-bf42-89ad90b590a0" data-align="center">
+
+<p>打开浏览器，登录GitHub账号，点击GitHub的头像选择New repository创建新仓库，仓库名称必须为：用户名. github.io，用户名为GitHub帐号名。</p>
+<img src="90f9cb94-326c-4795-8e01-11839fdedeb8.png" title="" alt="90f9cb94-326c-4795-8e01-11839fdedeb8" data-align="center">
+
+<img src="abc4eebb-ee90-45dd-9ed4-e8126352e9d3.png" title="" alt="abc4eebb-ee90-45dd-9ed4-e8126352e9d3" data-align="center">
+
+<img src="914d2770-c41d-4d75-b09d-2f66fba80e24.png" title="" alt="914d2770-c41d-4d75-b09d-2f66fba80e24" data-align="center">
+
+<p>在网站部署完之后可用网址“http:&#x2F;&#x2F;用户名. github.io”访问你的静态页面。</p>
+<img src="f50be09f-1404-439d-a8ab-f626963424b6.png" title="" alt="f50be09f-1404-439d-a8ab-f626963424b6" data-align="center">
+
+<h1 id="创建Hexo本地运行环境"><a href="#创建Hexo本地运行环境" class="headerlink" title="创建Hexo本地运行环境"></a>创建Hexo本地运行环境</h1><p>新建一个文件夹用来存放 Hexo 的程序文件，如“Blog”。打开创建的文件夹，右键用终端打开。</p>
+<h2 id="连接到GitHub"><a href="#连接到GitHub" class="headerlink" title="连接到GitHub"></a>连接到GitHub</h2><p>在终端输入</p>
+<pre><code class="bash">git config --global user.name  # user.name 为&quot;GitHub 用户名&quot;
+git config --global user.email  # user.email 为&quot;GitHub 邮箱&quot;
+</code></pre>
+<p>创建 SSH 密匙：<br>在终端输入 </p>
+<pre><code class="bash">ssh-keygen -t rsa -C &quot;GitHub注册邮箱&quot;
+</code></pre>
+<p>然后一直回车。<br>打开文件资源管理器，进入 C:\Users\用户名.ssh 文件夹（如果找不到，窗口考上三个小点旁篇找到查看-显示-隐藏的项目，勾选 “隐藏的项目”），用记事本打开id_rsa.pub（公钥）文件并复制里面的内容。</p>
+<p>浏览器登陆 GitHub，点击头像，进入Settings页面，选择左边栏的 SSH and GPG keys，点击 New SSH key。取个任意名字，粘贴上一步id_rsa.pub 文件复制内容到Key 中，点击 Add SSH key 完成添加（此时应该会给你发一个邮件）。</p>
+<img src="d86f674a-0a21-4ab1-880a-938fb49a7969.png" title="" alt="d86f674a-0a21-4ab1-880a-938fb49a7969" data-align="center">
+
+<img src="a10bb763-c98d-4bf7-bb55-8f10d8f7c093.png" title="" alt="a10bb763-c98d-4bf7-bb55-8f10d8f7c093" data-align="center">
+
+<h2 id="验证GitHub连接："><a href="#验证GitHub连接：" class="headerlink" title="验证GitHub连接："></a>验证GitHub连接：</h2><p>在终端输入 </p>
+<pre><code class="bash">ssh -T git@github.com 
+</code></pre>
+<p>出现 “Are you sure you want to continue connecting (yes&#x2F;no)?”，输入 yes 回车确认。<br>出现“Hi ”用户名“, You’ve successfully authenticated, but…” 说明连接成功。（下图来自网络，侵权请联系删除）</p>
+<img src="f921b73e-b2a7-409f-bb6d-08ac34763fd1.png" title="" alt="f921b73e-b2a7-409f-bb6d-08ac34763fd1" data-align="center">
+
+<h2 id="Hexo与GitHub关联"><a href="#Hexo与GitHub关联" class="headerlink" title="Hexo与GitHub关联"></a>Hexo与GitHub关联</h2><p>记事本打开配置文件_config.yml，翻到最后修改为，找到如下图文字，更改方式如下。</p>
+<pre><code class="bash">deploy:
+type: git
+repository: 这里填入你之前在GitHub上创建仓库的完整路径 + .git
+branch: 主分支名#（我的是main）
+</code></pre>
+<p>具体可参考下图：</p>
+<img src="623d6940-4b06-463a-8565-212e2888db1c.png" title="" alt="623d6940-4b06-463a-8565-212e2888db1c" data-align="center">
+
+<h1 id="Hexo建立网站"><a href="#Hexo建立网站" class="headerlink" title="Hexo建立网站"></a>Hexo建立网站</h1><p>初始化Hexo<br>刚刚创建好的文件夹“Blog“里打开终端输入：</p>
+<pre><code class="bash">Hexo initial
+</code></pre>
+<p>此时将出现如下图文件</p>
+<img src="efb00794-2604-4ced-b230-0cde3e5dde1f.png" title="" alt="efb00794-2604-4ced-b230-0cde3e5dde1f" data-align="center">
+
+<h2 id="生成网页"><a href="#生成网页" class="headerlink" title="生成网页"></a>生成网页</h2><p>输入：</p>
+<pre><code class="bash">Hexo g  #即hexo generate
+</code></pre>
+<p>会生成Hexo的默认主题网页文件</p>
+<h2 id="启动hexo服务-预览网页"><a href="#启动hexo服务-预览网页" class="headerlink" title="启动hexo服务(预览网页)"></a>启动hexo服务(预览网页)</h2><p>输入</p>
+<pre><code class="bash">Hexo s #即hexo server
+</code></pre>
+<p>根据终端提示，可在浏览器输入网址“<a href="http://localhost:4000”访问，预览生成的网页。">http://localhost:4000”访问，预览生成的网页。</a></p>
+<h2 id="部署网页到服务器"><a href="#部署网页到服务器" class="headerlink" title="部署网页到服务器"></a>部署网页到服务器</h2><p>输入：</p>
+<pre><code class="bash">Hexo d #即hexo deploy
+</code></pre>
+<p>在浏览器打开网址：http:&#x2F;&#x2F;“用户名”. github.io就可以看到你刚刚部署的网页。</p>
+<h2 id="更换主题"><a href="#更换主题" class="headerlink" title="更换主题"></a>更换主题</h2><p>进入Hexo官网，打开主题网页，找到好看的主题可点击预览图下方的主题名前往GitHub下载主题文件，或者直接git clone 到themes文件夹。例如我选择的主题为<a target="_blank" rel="noopener" href="https://github.com/argvchs/hexo-theme-particlex">ParticleX</a><br>可在终端输入：</p>
+<pre><code class="bash">cd themes #更改目录
+git clone https://github.com/argvchs/hexo-theme-particlex.git #克隆文件到本地（文件夹名可另改为particlex）
+</code></pre>
+<h2 id="主题更改"><a href="#主题更改" class="headerlink" title="主题更改"></a>主题更改</h2><p>记事本打开 “_config.yml” 找到theme，在冒号后更改为你想要应用的主题名。</p>
+<img src="87a17d1a-7652-49aa-8423-776f19065870.png" title="" alt="87a17d1a-7652-49aa-8423-776f19065870" data-align="center">
+
+<h2 id="主题修改"><a href="#主题修改" class="headerlink" title="主题修改"></a>主题修改</h2><p>可以参考主题作者的文档</p>
+<h1 id="撰写与发布博文"><a href="#撰写与发布博文" class="headerlink" title="撰写与发布博文"></a>撰写与发布博文</h1><h2 id="撰写博文"><a href="#撰写博文" class="headerlink" title="撰写博文"></a>撰写博文</h2><p>使用命令</p>
+<pre><code class="bash">Hexo new “post-name”# post-name为你发布博客的名称
+</code></pre>
+<p>将会在你 .&#x2F;sourse&#x2F;_post 文件夹里新建一个 post-name.md的文件，根据markdown的语法规则把你想写的内容写到这个文档。可使用Markdown编辑器编辑（vsCode也可以使用）。<br>如果不想使用命令，也可以直接在_post文件夹新建一个 .md的文档，注意添加Front-matter，格式如下：</p>
+<pre><code class="yml">---
+title: Hello World #标题
+date: 2013/7/13 20:46:25  #默认添加，可不写
+categories: Diary #两个或以上可以用中括号，例如：[Diary, Games]
+tags: Games #两个或以上可以用中括号，例如：[Diary, Games]
+---
+</code></pre>
+<h2 id="发布博文"><a href="#发布博文" class="headerlink" title="发布博文"></a>发布博文</h2><p>先使用命令：</p>
+<pre><code class="bash">hexo g  
+</code></pre>
+<p>生成网页文件<br>再输入：</p>
+<pre><code class="bash">hexo s 
+</code></pre>
+<p>打开浏览器，输入预览网址，预览一下排版如果没问题，使用：</p>
+<pre><code class="bash">hexo d
+</code></pre>
+<p>部署到网站。</p>
+<h1 id="参考来源："><a href="#参考来源：" class="headerlink" title="参考来源："></a>参考来源：</h1><p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/26625249">GitHub+Hexo 搭建个人网站详细教程 - 知乎 </a></p>
+
+    </div>
+    
+    
+    
+    
+    
+    
+    
+</div>
+
+                <footer id="footer">
+    <div id="footer-wrap">
+        <div>
+            &copy;
+            2022 - 2023 Frank&#39; blog
+            <span id="footer-icon">
+                <i class="fa-solid fa-font-awesome fa-fw"></i>
+            </span>
+            &commat;Frank
+        </div>
+        <div>
+            Based on the <a target="_blank" rel="noopener" href="https://hexo.io">Hexo Engine</a> &amp;
+            <a target="_blank" rel="noopener" href="https://github.com/argvchs/hexo-theme-particlex">ParticleX Theme</a>
+        </div>
+        
+    </div>
+</footer>
+
+            </div>
+            </transition>
+            
+            <transition name="fade">
+            <div id="preview" ref="preview" v-show="previewShow">
+                <img id="preview-content" ref="previewContent" />
+            </div>
+            </transition>
+            
+        </div>
+        <script src="/js/main.js"></script>
+        
+        
+
+
+
+
+        
+    </body>
+</html>
